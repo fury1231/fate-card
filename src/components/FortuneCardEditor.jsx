@@ -174,7 +174,7 @@ export default function FortuneCardEditor() {
                 fontSize: `${titleFontSize.toFixed(2)}rem`,
                 fontWeight: "bold",
                 textAlign: "center",
-                marginBottom: "24px",
+                marginBottom: "-12px",
                 color: textColor,
                 textShadow: "0 1px 3px rgba(0,0,0,0.1)"
               }}
