@@ -16,6 +16,7 @@ export default function FortuneCardEditor() {
   const [font] = useState("FortuneFont");
   const [textColor] = useState("#2f2f2f");
   const [bodyFontSize, setBodyFontSize] = useState(1.5);
+  const [titleFontSize, setTitleFontSize] = useState(2.5); // 內文標題字體大小
   const previewRef = useRef(null);
 
   const handleDownload = async () => {
@@ -105,7 +106,20 @@ export default function FortuneCardEditor() {
             }}
           />
         </div>
-  
+        <div className="mt-4">
+        <label className="block text-sm font-semibold mb-1">
+          標題字體大小：{titleFontSize.toFixed(2)}rem
+        </label>
+        <input
+          type="range"
+          min="1"
+          max="3"
+          step="0.05"
+          value={titleFontSize}
+          onChange={(e) => setTitleFontSize(parseFloat(e.target.value))}
+          className="w-full accent-indigo-500"
+        />
+      </div>
           <div className="mt-4">
             <label className="block text-sm font-semibold mb-1">
               內文字體大小：{bodyFontSize.toFixed(2)}rem
@@ -156,7 +170,7 @@ export default function FortuneCardEditor() {
           >
             <div
               style={{
-                fontSize: "1.8rem",
+                fontSize: `${titleFontSize.toFixed(2)}rem`,
                 fontWeight: "bold",
                 textAlign: "center",
                 marginBottom: "24px",
