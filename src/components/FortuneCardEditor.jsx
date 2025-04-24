@@ -35,7 +35,7 @@ export default function FortuneCardEditor() {
       const response = await fetch("/gpt.txt");
       const text = await response.text();
       await navigator.clipboard.writeText(text);
-      alert("✅ GPT 指令已複製到剪貼簿！");
+      alert("✅ GPT PROPMPT已複製到剪貼簿！");
     } catch (error) {
       alert("❌ 複製失敗，請確認 gpt.txt 是否存在於 public 資料夾！");
     }
