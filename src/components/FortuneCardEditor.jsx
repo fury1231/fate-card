@@ -53,7 +53,7 @@ export default function FortuneCardEditor() {
           style={{
             marginTop: "0",
             marginBottom: isHeading ? "0.1rem" : "0.5rem",
-            textIndent: isHeading ? "0" : "2em",
+            textIndent: 0,
             maxWidth: "520px",
             overflowWrap: "break-word",
             wordBreak: "break-word",
