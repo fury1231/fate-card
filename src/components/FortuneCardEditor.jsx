@@ -16,7 +16,7 @@ export default function FortuneCardEditor() {
   const [font] = useState("FortuneFont");
   const [textColor] = useState("#2f2f2f");
   const [bodyFontSize, setBodyFontSize] = useState(1.5);
-  const [titleFontSize, setTitleFontSize] = useState(2.5); // 內文標題字體大小
+  const [titleFontSize, setTitleFontSize] = useState(2.4); // 內文標題字體大小
   const previewRef = useRef(null);
 
   const handleDownload = async () => {
@@ -66,6 +66,7 @@ export default function FortuneCardEditor() {
               : `${bodyFontSize.toFixed(2)}rem`
           }}
         >
+          
           {line}
         </p>
       );
